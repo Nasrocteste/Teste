@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Opções Interativas</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>Você me odeia?</h1>
+
+        <div class="opcoes">
+            <label>
+                <input type="radio" name="opcao" value="opcao1" class="opcao" id="opcao1" checked>
+                Sim
+            </label>
+            <label>
+                <input type="radio" name="opcao" value="opcao2" class="opcao" id="opcao2">
+                Não
+            </label>
+        </div>
+
+        <div class="conteudo">
+            <p id="conteudo-opcao1">Te odeio mais pode ter certeza!</p>
+            <p id="conteudo-opcao2" style="display:none;">OOWWNNTT que fofo, bem gay!</p>
+        </div>
+    </div>
+
+    <script>
+        // Script para alternar as opções
+        const opcao1 = document.getElementById("opcao1");
+        const opcao2 = document.getElementById("opcao2");
+        const conteudoOpcao1 = document.getElementById("conteudo-opcao1");
+        const conteudoOpcao2 = document.getElementById("conteudo-opcao2");
+
+        opcao1.addEventListener("change", () => {
+            conteudoOpcao1.style.display = "block";
+            conteudoOpcao2.style.display = "none";
+        });
+
+        opcao2.addEventListener("change", () => {
+            conteudoOpcao1.style.display = "none";
+            conteudoOpcao2.style.display = "block";
+        });
+    </script>
+
+</body>
+</html>
